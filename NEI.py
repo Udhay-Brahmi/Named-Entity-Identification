@@ -63,11 +63,12 @@ input = st.text_input("Enter input string here: ")
 if st.button("Process Text"):
     st.write("Output: ")
     pred, tokens, features = infer(nei_model, scaler_model, input)
-    
-    o = []
+
+    o = ''
     for w, p in zip(tokens, pred):
-        o.append(w + '_' + str(int(p)))
+        o += w + '_' + str(int(p)) + ' '
 
     st.write(o)
+
 
 
