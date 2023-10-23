@@ -6,6 +6,7 @@ from string import punctuation
 import pickle
 import streamlit as st
 
+nltk.download('stopwords')
 PUNCT = list(punctuation)
 SW = stopwords.words("english")
 Features_count = 6
